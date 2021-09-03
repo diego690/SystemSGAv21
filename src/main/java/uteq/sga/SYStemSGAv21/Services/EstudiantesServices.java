@@ -22,23 +22,23 @@ public class EstudiantesServices {
     private IEstudiantesRepository esturepo;
     
     
-    public List<Estudiantes> listarTodos() {
-        return (List<Estudiantes>) esturepo.findAll();
+    public List<Estudiantes> getDocentes(){
+        return esturepo.findAll();
     }
-
     
-    public void guardar(Estudiantes actividad) {
-        esturepo.save(actividad);
+    //save
+    public void save(Estudiantes docente){
+        esturepo.save(docente);
     }
-
-   
-    public Estudiantes buscaById(Integer id) {
+    
+    //get id
+    public Estudiantes findById(Integer id){
         return esturepo.findById(id).orElse(null);
     }
-
     
-    public void eliminar(Integer id) {
-        esturepo.deleteById(id);
+    //delete
+    public void delete(Integer docente){
+        esturepo.deleteById(docente);
     }
     
 }

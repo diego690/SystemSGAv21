@@ -22,4 +22,16 @@ public class ApplicationController {
         return "index";
     }
     
+    @RequestMapping("/login")
+    public String login() {
+        
+        return "index";
+    }
+    
+    @RequestMapping("/logout")
+    public String logout() {
+        
+        return "index";
+    }
+    
 }
